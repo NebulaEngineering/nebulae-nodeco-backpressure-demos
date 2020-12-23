@@ -24,6 +24,7 @@
   "homepage": "https://github.com/NebulaEngineering/nebulae-nodeco-backpressure-demos#readme",
   "dependencies": {
     "@nebulae/backend-node-tools": "^0.2.0",
+    "dotenv": "^8.2.0",
     "mongodb": "^3.6.3",
     "rxjs": "^6.6.3"
   }

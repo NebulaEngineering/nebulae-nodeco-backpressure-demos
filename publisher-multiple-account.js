@@ -8,13 +8,17 @@ const { range, } = require("rxjs");
 const { map, delay, concatMap, mergeMap, tap } = require('rxjs/operators');
 
 const MESSAGES_TO_PUBLISH = parseInt(process.env.MESSAGES_TO_PUBLISH);
+const ACCOUNTS = [2020, 3030, 4040, 5050, 6060, 7070, 8080, 9090];
 
 let initTime;
 let endTime;
 let txs = 0;
 
 range(0, MESSAGES_TO_PUBLISH).pipe(
-    map(i => ({ account: 1010, type: i % 2 == 0 ? 'DEBIT' : 'CREDIT', amount: i % 2 == 0 ? 1 : 2 })),
+    map(i => {
+        const account = ACCOUNTS[i % (ACCOUNTS.length)];
+        return { account, type: i % 2 == 0 ? 'DEBIT' : 'CREDIT', amount: i % 2 == 0 ? 1 : 2 };
+    }),
     //concatMap(tx => broker.send$('account', 'tx', tx))
     //concatMap(tx => broker.send$('account', 'tx', tx).pipe(delay(1)))
     mergeMap(tx => broker.send$('account', 'tx', tx)),
