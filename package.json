@@ -1,0 +1,28 @@
+{
+  "name": "@nebulaengineering/nebulae-nodeco-backpressure-demos",
+  "version": "1.0.0",
+  "description": "Code samples of handling backpressure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NebulaEngineering/nebulae-nodeco-backpressure-demos.git"
+  },
+  "keywords": [
+    "nodeco",
+    "nebulae",
+    "backpressure",
+    "rxjs"
+  ],
+  "author": "Sebastian Molano on behalf of Nebula Engineering SAS",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/NebulaEngineering/nebulae-nodeco-backpressure-demos/issues"
+  },
+  "homepage": "https://github.com/NebulaEngineering/nebulae-nodeco-backpressure-demos#readme",
+  "dependencies": {
+    "rxjs": "^6.6.3"
+  }
+}
